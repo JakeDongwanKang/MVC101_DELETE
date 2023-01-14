@@ -1,0 +1,22 @@
+@model System.Diagnostics.Process
+
+@{
+    ViewData["Title"] = "Process Details";
+}
+
+<div>
+    <table>
+        <tr>
+            <td>ID:</td>
+            <td>@Model.Id</td>
+        </tr>
+        <tr>
+            <td>Name:</td>
+            <td>@Model.ProcessName</td>
+        </tr>
+        <tr>
+            <td>Count</td>
+            <td>@Model.HandleCount</td>
+        </tr>
+    </table>
+</div>

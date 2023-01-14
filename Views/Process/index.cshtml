@@ -1,0 +1,19 @@
+@model System.Diagnostics.Process[]
+@{
+    ViewData["Title"] = "Processes";
+}
+
+<div>
+    <h2>@ViewData["Title"]</h2>
+    <ul>
+        @foreach (var item in Model) {
+            if(item.ProcessName.Trim().Length > 0) {
+            <li>
+                <a asp-controller="Process"
+                asp-action="Display"
+                asp-route-id="@item.Id">@item.ProcessName</a>
+            </li>
+            }
+        }
+    </ul>
+</div>
